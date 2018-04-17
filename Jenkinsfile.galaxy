@@ -1,0 +1,27 @@
+stage 'Clear workspace'
+
+node {
+    deleteDir()
+    checkout scm
+}
+
+stage "Install dependency"
+
+node {
+    wrap([$class: 'AnsiColorBuildWrapper', colorMapName: "xterm"]) {
+        sh 'ansible-galaxy install -p . -r requirements.yml'
+    }
+}
+
+stage "Deploy to production"
+
+node {
+    wrap([$class: 'AnsiColorBuildWrapper', colorMapName: "xterm"]) {
+        ansiblePlaybook(
+            playbook: 'starschema.yml',
+            inventory: 'inventory.ini',
+            credentialsId: '96b3fe82-e6a4-45eb-9e8d-0a512cba5a9c',
+            colorized: true
+            )
+    }
+}
