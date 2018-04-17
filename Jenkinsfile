@@ -8,7 +8,7 @@ node {
         ansiblePlaybook(
             playbook: 'ping.yml',
             inventory: 'inventory.ini',
-            credentialsId: '8660dc0b-c062-49c6-ac26-b6c0856f47f8',
+            credentialsId: 'sample-ssh-key',
             colorized: true)
     }
 }
