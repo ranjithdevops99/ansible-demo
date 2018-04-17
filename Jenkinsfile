@@ -8,7 +8,7 @@ node {
         ansiblePlaybook(
             playbook: 'ping.yml',
             inventory: 'inventory.ini',
-            private_key: '/root/.ssh/id_rsa',
+            credentialsId: '8660dc0b-c062-49c6-ac26-b6c0856f47f8',
             colorized: true)
     }
 }
