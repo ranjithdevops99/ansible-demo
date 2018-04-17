@@ -3,7 +3,7 @@
   become: yes
   tasks:
     - name: Install packages
-      apt: name={{ item }} state=present
+      yum: name={{ item }} state=present
       with_items:
         - apache2
         - varnish
