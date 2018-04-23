@@ -8,7 +8,7 @@ node {
         ansiblePlaybook(
             playbook: 'ping.yml',
             inventory: 'inventory.ini',
-            credentialsId: '1c1789cd-36bc-4902-a275-01f57ad2f7c4',
+            credentialsId: '353e340f-3a35-4695-965d-1bcfc2cb7591',
             colorized: true)
     }
 }
@@ -20,7 +20,7 @@ node {
         ansiblePlaybook(
             playbook: 'webserver.yml',
             inventory: 'inventory.ini',
-            credentialsId: '1c1789cd-36bc-4902-a275-01f57ad2f7c4',
+            credentialsId: '353e340f-3a35-4695-965d-1bcfc2cb7591',
             extras: '--syntax-check',
             colorized: true
             )
@@ -34,7 +34,7 @@ node {
         ansiblePlaybook(
             playbook: 'webserver.yml',
             inventory: 'inventory.ini',
-            credentialsId: '1c1789cd-36bc-4902-a275-01f57ad2f7c4',
+            credentialsId: '353e340f-3a35-4695-965d-1bcfc2cb7591',
             extras: '--check --diff',
             colorized: true
             )
@@ -48,7 +48,7 @@ node {
         ansiblePlaybook(
             playbook: 'webserver.yml',
             inventory: 'inventory.ini',
-            credentialsId: '1c1789cd-36bc-4902-a275-01f57ad2f7c4',
+            credentialsId: '353e340f-3a35-4695-965d-1bcfc2cb7591',
             colorized: true
             )
     }
